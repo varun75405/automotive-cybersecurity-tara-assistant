@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "question": "Identify all safety-critical ECUs mentioned in the architecture.",
+    "expected_elements": ["ADAS ECU", "Powertrain Domain Controller", "Braking ECU", "Steering ECU"],
+    "category": "asset"
+  },
+  {
+    "id": 2,
+    "question": "What is the primary function of the Central Gateway (CGW)?",
+    "expected_elements": ["Network routing", "Firewall", "Intrusion detection", "Network segmentation"],
+    "category": "asset"
+  },
+  {
+    "id": 3,
+    "question": "Which ECUs are connected to the Automotive Ethernet network?",
+    "expected_elements": ["TCU", "IVI", "ADAS", "CGW"],
+    "category": "asset"
+  },
+  {
+    "id": 4,
+    "question": "What are the trust boundaries defined in the vehicle architecture?",
+    "expected_elements": ["Vehicle Boundary", "In-Vehicle Network Boundary", "ECU Boundary", "External Interface Boundary"],
+    "category": "asset"
+  },
+  {
+    "id": 5,
+    "question": "What are the access requirements to exploit the OBD-II interface?",
+    "expected_elements": ["Physical presence", "Inside the vehicle cabin"],
+    "category": "attack_surface"
+  },
+  {
+    "id": 6,
+    "question": "Why is the In-Vehicle Infotainment (IVI) system considered a high-risk attack surface?",
+    "expected_elements": ["Rich user interfaces", "External connectivity", "Wi-Fi", "Bluetooth", "USB"],
+    "category": "attack_surface"
+  },
+  {
+    "id": 7,
+    "question": "What are the known concerns associated with Automotive Ethernet?",
+    "expected_elements": ["Complex protocol stacks", "High bandwidth allowing rapid exfiltration or flooding"],
+    "category": "attack_surface"
+  },
+  {
+    "id": 8,
+    "question": "Describe the potential impact of an Unauthorized CAN Message Injection attack.",
+    "expected_elements": ["Unintended acceleration, braking, or steering", "Loss of vehicle control"],
+    "category": "threat"
+  },
+  {
+    "id": 9,
+    "question": "What preconditions are necessary for a Replay Attack on the vehicle?",
+    "expected_elements": ["Ability to sniff and transmit on the target medium", "Wireless interception"],
+    "category": "threat"
+  },
+  {
+    "id": 10,
+    "question": "Which threat targets the cellular interface and could lead to full vehicle compromise?",
+    "expected_elements": ["Compromised OTA Path"],
+    "category": "threat"
+  },
+  {
+    "id": 11,
+    "question": "Explain the threat of Sensor Data Manipulation.",
+    "expected_elements": ["Feeding fake physical signals", "Deceiving ADAS system", "Incorrect autonomous decisions"],
+    "category": "threat"
+  },
+  {
+    "id": 12,
+    "question": "What mitigations prevent a Malicious Firmware Update?",
+    "expected_elements": ["Secure Boot", "Digital signatures", "Hardware Root of Trust"],
+    "category": "mitigation"
+  },
+  {
+    "id": 13,
+    "question": "How does SecOC protect automotive communications?",
+    "expected_elements": ["Message Authentication Codes (MAC)", "Freshness values", "Prevents modification", "Prevents replay"],
+    "category": "mitigation"
+  },
+  {
+    "id": 14,
+    "question": "What is the purpose of a Hardware Security Module (HSM) in an ECU?",
+    "expected_elements": ["Cryptographic operations", "Secure key storage", "Tamper resistance"],
+    "category": "mitigation"
+  },
+  {
+    "id": 15,
+    "question": "Describe the data flow for an OTA update.",
+    "expected_elements": ["Cloud to Cellular", "TCU", "Ethernet", "CGW", "Target ECU"],
+    "category": "architecture"
+  },
+  {
+    "id": 16,
+    "question": "How are diagnostic commands from the OBD-II port routed to the Powertrain ECU?",
+    "expected_elements": ["OBD-II Port", "CGW", "High-Speed CAN", "Powertrain ECU", "UDS"],
+    "category": "architecture"
+  },
+  {
+    "id": 17,
+    "question": "What routing rules does the CGW apply to traffic from the IVI domain?",
+    "expected_elements": ["Highly restricted", "Drops all control messages originating from IVI"],
+    "category": "architecture"
+  },
+  {
+    "id": 18,
+    "question": "What security mechanism should be required before allowing sensitive UDS diagnostic services?",
+    "expected_elements": ["Security Access (Seed-Key)", "Physical state checks", "Certificate Auth"],
+    "category": "requirement"
+  },
+  {
+    "id": 19,
+    "question": "What must be implemented to protect the privacy of V2X communications?",
+    "expected_elements": ["Pseudonym certificates", "V2X PKI"],
+    "category": "requirement"
+  },
+  {
+    "id": 20,
+    "question": "How should an OTA client prevent rollback attacks?",
+    "expected_elements": ["Hardware version counters", "Version checking", "Prevent downgrades to vulnerable versions"],
+    "category": "requirement"
+  }
+]

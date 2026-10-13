@@ -1,0 +1,44 @@
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+
+# Python byte code & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+env/
+ENV/
+
+# Testing & profiling
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Runtime data & vector database storage
+data/
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+models_cache/
+
+# IDE & Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini

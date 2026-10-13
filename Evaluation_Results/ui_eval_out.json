@@ -1,0 +1,202 @@
+[
+  {
+    "ID": 1,
+    "Category": "asset",
+    "Question": "Identify all safety-critical ECUs mentioned in the architecture.",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "0%",
+    "Latency (s)": 1.2,
+    "Top Source": "communication_matrix.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\n- **Hardware Platform:** High-perf..."
+  },
+  {
+    "ID": 2,
+    "Category": "asset",
+    "Question": "What is the primary function of the Central Gateway (CGW)?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "100%",
+    "Latency (s)": 1.28,
+    "Top Source": "ecu_inventory.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nCentral Gateway (CGW) - **Function..."
+  },
+  {
+    "ID": 3,
+    "Category": "asset",
+    "Question": "Which ECUs are connected to the Automotive Ethernet network?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "100%",
+    "Latency (s)": 1.3,
+    "Top Source": "sample_vehicle_architecture.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nAutomotive Ethernet Network - **Sp..."
+  },
+  {
+    "ID": 4,
+    "Category": "asset",
+    "Question": "What are the trust boundaries defined in the vehicle architecture?",
+    "Retrieved Chunks": 4,
+    "Concept Coverage": "50%",
+    "Latency (s)": 1.42,
+    "Top Source": "sample_vehicle_architecture.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nTrust Boundaries and Zones The arc..."
+  },
+  {
+    "ID": 5,
+    "Category": "attack_surface",
+    "Question": "What are the access requirements to exploit the OBD-II interface?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "100%",
+    "Latency (s)": 1.32,
+    "Top Source": "attack_surface_knowledge.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\n- **Access Requirements:** Require..."
+  },
+  {
+    "ID": 6,
+    "Category": "attack_surface",
+    "Question": "Why is the In-Vehicle Infotainment (IVI) system considered a high-risk attack surface?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "0%",
+    "Latency (s)": 1.49,
+    "Top Source": "automotive_threat_library.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nBlocking unauthorized control mess..."
+  },
+  {
+    "ID": 7,
+    "Category": "attack_surface",
+    "Question": "What are the known concerns associated with Automotive Ethernet?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "50%",
+    "Latency (s)": 1.31,
+    "Top Source": "attack_surface_knowledge.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nAutomotive Ethernet - **Exposure L..."
+  },
+  {
+    "ID": 8,
+    "Category": "threat",
+    "Question": "Describe the potential impact of an Unauthorized CAN Message Injection attack.",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "50%",
+    "Latency (s)": 4.72,
+    "Top Source": "automotive_threat_library.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\n## TH-001: Unauthorized CAN Messag..."
+  },
+  {
+    "ID": 9,
+    "Category": "threat",
+    "Question": "What preconditions are necessary for a Replay Attack on the vehicle?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "100%",
+    "Latency (s)": 1.18,
+    "Top Source": "automotive_threat_library.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\n## TH-003: Replay Attacks - **Thre..."
+  },
+  {
+    "ID": 10,
+    "Category": "threat",
+    "Question": "Which threat targets the cellular interface and could lead to full vehicle compromise?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "0%",
+    "Latency (s)": 1.71,
+    "Top Source": "automotive_threat_library.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\n- **Potential Impact:** Full vehic..."
+  },
+  {
+    "ID": 11,
+    "Category": "threat",
+    "Question": "Explain the threat of Sensor Data Manipulation.",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "0%",
+    "Latency (s)": 1.28,
+    "Top Source": "automotive_threat_library.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\n## TH-008: Sensor Data Manipulatio..."
+  },
+  {
+    "ID": 12,
+    "Category": "mitigation",
+    "Question": "What mitigations prevent a Malicious Firmware Update?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "33%",
+    "Latency (s)": 1.41,
+    "Top Source": "automotive_threat_library.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nmanipulates the Over-The-Air updat..."
+  },
+  {
+    "ID": 13,
+    "Category": "mitigation",
+    "Question": "How does SecOC protect automotive communications?",
+    "Retrieved Chunks": 4,
+    "Concept Coverage": "0%",
+    "Latency (s)": 1.4,
+    "Top Source": "mitigation_library.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nTLS for IP networks, SecOC for aut..."
+  },
+  {
+    "ID": 14,
+    "Category": "mitigation",
+    "Question": "What is the purpose of a Hardware Security Module (HSM) in an ECU?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "33%",
+    "Latency (s)": 1.62,
+    "Top Source": "mitigation_library.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nHardware Security Modules (HSM) - ..."
+  },
+  {
+    "ID": 15,
+    "Category": "architecture",
+    "Question": "Describe the data flow for an OTA update.",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "80%",
+    "Latency (s)": 1.59,
+    "Top Source": "sample_vehicle_architecture.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nKey Data Flows - **OTA Update Flow..."
+  },
+  {
+    "ID": 16,
+    "Category": "architecture",
+    "Question": "How are diagnostic commands from the OBD-II port routed to the Powertrain ECU?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "60%",
+    "Latency (s)": 1.29,
+    "Top Source": "sample_vehicle_architecture.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nDetails per Path and Matrix Summar..."
+  },
+  {
+    "ID": 17,
+    "Category": "architecture",
+    "Question": "What routing rules does the CGW apply to traffic from the IVI domain?",
+    "Retrieved Chunks": 4,
+    "Concept Coverage": "50%",
+    "Latency (s)": 1.31,
+    "Top Source": "communication_matrix.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nCommunication Path: IVI to Central..."
+  },
+  {
+    "ID": 18,
+    "Category": "requirement",
+    "Question": "What security mechanism should be required before allowing sensitive UDS diagnostic services?",
+    "Retrieved Chunks": 5,
+    "Concept Coverage": "0%",
+    "Latency (s)": 1.24,
+    "Top Source": "TARA_upload_test_sample.pdf",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nSensitive diagnostic services shou..."
+  },
+  {
+    "ID": 19,
+    "Category": "requirement",
+    "Question": "What must be implemented to protect the privacy of V2X communications?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "100%",
+    "Latency (s)": 1.14,
+    "Top Source": "attack_surface_knowledge.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\n- **Defensive Considerations:** V2..."
+  },
+  {
+    "ID": 20,
+    "Category": "requirement",
+    "Question": "How should an OTA client prevent rollback attacks?",
+    "Retrieved Chunks": 3,
+    "Concept Coverage": "66%",
+    "Latency (s)": 8.6,
+    "Top Source": "mitigation_library.md",
+    "Answer Preview": "[DEMO FALLBACK \u2014 EXTRACTIVE ANSWER]\n\nBased on the retrieved knowledge-base excerpts:\n\nSecure OTA (Signed Firmware, Rollb..."
+  }
+]

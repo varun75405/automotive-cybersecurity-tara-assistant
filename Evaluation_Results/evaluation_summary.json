@@ -1,0 +1,403 @@
+{
+  "timestamp": "2026-10-11 11:54:08",
+  "total_questions": 20,
+  "source_documents_count": 6,
+  "structural_sections_count": 70,
+  "indexed_chunks_count": 209,
+  "llm_mode": "DEMO FALLBACK",
+  "metrics": {
+    "concept_coverage_percent": 67.33,
+    "retrieval_hit_rate_percent": 100.0,
+    "average_latency_seconds": 0.03
+  },
+  "metric_definitions_and_limitations": {
+    "retrieval_hit_rate_percent": "Measures the percentage of queries where the vector database returned at least one non-empty chunk. It does NOT independently verify that the retrieved chunk answered the question or was factually sufficient.",
+    "concept_coverage_percent": "Measures the presence of expected ground-truth domain keywords in either the LLM response OR any retrieved context chunk. It is a keyword presence heuristic, NOT a measure of standalone answer semantic correctness.",
+    "average_latency_seconds": "Measures retrieval and lookup time under the active execution mode. Under DEMO FALLBACK mode, this measures local vector query + template lookup time (mean of 20 queries: 0.035s, rounded to 0.03s) and must NOT be interpreted as a real-LLM API end-to-end generation latency (which typically requires 1.0-3.0s)."
+  },
+  "details": [
+    {
+      "question_id": 1,
+      "category": "asset",
+      "question": "Identify all safety-critical ECUs mentioned in the architecture.",
+      "citations_retrieved": 5,
+      "top_citation": "communication_matrix.md",
+      "concept_coverage": 0.0,
+      "expected_elements": [
+        "ADAS ECU",
+        "Powertrain Domain Controller",
+        "Braking ECU",
+        "Steering ECU"
+      ],
+      "matched_elements": [],
+      "latency_seconds": 0.052,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 2,
+      "category": "asset",
+      "question": "What is the primary function of the Central Gateway (CGW)?",
+      "citations_retrieved": 5,
+      "top_citation": "ecu_inventory.md",
+      "concept_coverage": 100.0,
+      "expected_elements": [
+        "Network routing",
+        "Firewall",
+        "Intrusion detection",
+        "Network segmentation"
+      ],
+      "matched_elements": [
+        "Network routing",
+        "Firewall",
+        "Intrusion detection",
+        "Network segmentation"
+      ],
+      "latency_seconds": 0.029,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 3,
+      "category": "asset",
+      "question": "Which ECUs are connected to the Automotive Ethernet network?",
+      "citations_retrieved": 5,
+      "top_citation": "sample_vehicle_architecture.md",
+      "concept_coverage": 100.0,
+      "expected_elements": [
+        "TCU",
+        "IVI",
+        "ADAS",
+        "CGW"
+      ],
+      "matched_elements": [
+        "TCU",
+        "IVI",
+        "ADAS",
+        "CGW"
+      ],
+      "latency_seconds": 0.024,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 4,
+      "category": "asset",
+      "question": "What are the trust boundaries defined in the vehicle architecture?",
+      "citations_retrieved": 5,
+      "top_citation": "sample_vehicle_architecture.md",
+      "concept_coverage": 100.0,
+      "expected_elements": [
+        "Vehicle Boundary",
+        "In-Vehicle Network Boundary",
+        "ECU Boundary",
+        "External Interface Boundary"
+      ],
+      "matched_elements": [
+        "Vehicle Boundary",
+        "In-Vehicle Network Boundary",
+        "ECU Boundary",
+        "External Interface Boundary"
+      ],
+      "latency_seconds": 0.025,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 5,
+      "category": "attack_surface",
+      "question": "What are the access requirements to exploit the OBD-II interface?",
+      "citations_retrieved": 5,
+      "top_citation": "attack_surface_knowledge.md",
+      "concept_coverage": 100.0,
+      "expected_elements": [
+        "Physical presence",
+        "Inside the vehicle cabin"
+      ],
+      "matched_elements": [
+        "Physical presence",
+        "Inside the vehicle cabin"
+      ],
+      "latency_seconds": 0.019,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 6,
+      "category": "attack_surface",
+      "question": "Why is the In-Vehicle Infotainment (IVI) system considered a high-risk attack surface?",
+      "citations_retrieved": 5,
+      "top_citation": "automotive_threat_library.md",
+      "concept_coverage": 100.0,
+      "expected_elements": [
+        "Rich user interfaces",
+        "External connectivity",
+        "Wi-Fi",
+        "Bluetooth",
+        "USB"
+      ],
+      "matched_elements": [
+        "Rich user interfaces",
+        "External connectivity",
+        "Wi-Fi",
+        "Bluetooth",
+        "USB"
+      ],
+      "latency_seconds": 0.038,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 7,
+      "category": "attack_surface",
+      "question": "What are the known concerns associated with Automotive Ethernet?",
+      "citations_retrieved": 5,
+      "top_citation": "attack_surface_knowledge.md",
+      "concept_coverage": 50.0,
+      "expected_elements": [
+        "Complex protocol stacks",
+        "High bandwidth allowing rapid exfiltration or flooding"
+      ],
+      "matched_elements": [
+        "Complex protocol stacks"
+      ],
+      "latency_seconds": 0.057,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 8,
+      "category": "threat",
+      "question": "Describe the potential impact of an Unauthorized CAN Message Injection attack.",
+      "citations_retrieved": 5,
+      "top_citation": "automotive_threat_library.md",
+      "concept_coverage": 100.0,
+      "expected_elements": [
+        "Unintended acceleration, braking, or steering",
+        "Loss of vehicle control"
+      ],
+      "matched_elements": [
+        "Unintended acceleration, braking, or steering",
+        "Loss of vehicle control"
+      ],
+      "latency_seconds": 0.022,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 9,
+      "category": "threat",
+      "question": "What preconditions are necessary for a Replay Attack on the vehicle?",
+      "citations_retrieved": 5,
+      "top_citation": "automotive_threat_library.md",
+      "concept_coverage": 100.0,
+      "expected_elements": [
+        "Ability to sniff and transmit on the target medium",
+        "Wireless interception"
+      ],
+      "matched_elements": [
+        "Ability to sniff and transmit on the target medium",
+        "Wireless interception"
+      ],
+      "latency_seconds": 0.02,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 10,
+      "category": "threat",
+      "question": "Which threat targets the cellular interface and could lead to full vehicle compromise?",
+      "citations_retrieved": 5,
+      "top_citation": "automotive_threat_library.md",
+      "concept_coverage": 0.0,
+      "expected_elements": [
+        "Compromised OTA Path"
+      ],
+      "matched_elements": [],
+      "latency_seconds": 0.025,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 11,
+      "category": "threat",
+      "question": "Explain the threat of Sensor Data Manipulation.",
+      "citations_retrieved": 5,
+      "top_citation": "automotive_threat_library.md",
+      "concept_coverage": 0.0,
+      "expected_elements": [
+        "Feeding fake physical signals",
+        "Deceiving ADAS system",
+        "Incorrect autonomous decisions"
+      ],
+      "matched_elements": [],
+      "latency_seconds": 0.029,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 12,
+      "category": "mitigation",
+      "question": "What mitigations prevent a Malicious Firmware Update?",
+      "citations_retrieved": 5,
+      "top_citation": "automotive_threat_library.md",
+      "concept_coverage": 33.3,
+      "expected_elements": [
+        "Secure Boot",
+        "Digital signatures",
+        "Hardware Root of Trust"
+      ],
+      "matched_elements": [
+        "Secure Boot"
+      ],
+      "latency_seconds": 0.027,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 13,
+      "category": "mitigation",
+      "question": "How does SecOC protect automotive communications?",
+      "citations_retrieved": 5,
+      "top_citation": "mitigation_library.md",
+      "concept_coverage": 0.0,
+      "expected_elements": [
+        "Message Authentication Codes (MAC)",
+        "Freshness values",
+        "Prevents modification",
+        "Prevents replay"
+      ],
+      "matched_elements": [],
+      "latency_seconds": 0.025,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 14,
+      "category": "mitigation",
+      "question": "What is the purpose of a Hardware Security Module (HSM) in an ECU?",
+      "citations_retrieved": 5,
+      "top_citation": "mitigation_library.md",
+      "concept_coverage": 66.7,
+      "expected_elements": [
+        "Cryptographic operations",
+        "Secure key storage",
+        "Tamper resistance"
+      ],
+      "matched_elements": [
+        "Cryptographic operations",
+        "Tamper resistance"
+      ],
+      "latency_seconds": 0.022,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 15,
+      "category": "architecture",
+      "question": "Describe the data flow for an OTA update.",
+      "citations_retrieved": 5,
+      "top_citation": "sample_vehicle_architecture.md",
+      "concept_coverage": 80.0,
+      "expected_elements": [
+        "Cloud to Cellular",
+        "TCU",
+        "Ethernet",
+        "CGW",
+        "Target ECU"
+      ],
+      "matched_elements": [
+        "TCU",
+        "Ethernet",
+        "CGW",
+        "Target ECU"
+      ],
+      "latency_seconds": 0.027,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 16,
+      "category": "architecture",
+      "question": "How are diagnostic commands from the OBD-II port routed to the Powertrain ECU?",
+      "citations_retrieved": 5,
+      "top_citation": "sample_vehicle_architecture.md",
+      "concept_coverage": 100.0,
+      "expected_elements": [
+        "OBD-II Port",
+        "CGW",
+        "High-Speed CAN",
+        "Powertrain ECU",
+        "UDS"
+      ],
+      "matched_elements": [
+        "OBD-II Port",
+        "CGW",
+        "High-Speed CAN",
+        "Powertrain ECU",
+        "UDS"
+      ],
+      "latency_seconds": 0.037,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 17,
+      "category": "architecture",
+      "question": "What routing rules does the CGW apply to traffic from the IVI domain?",
+      "citations_retrieved": 5,
+      "top_citation": "communication_matrix.md",
+      "concept_coverage": 50.0,
+      "expected_elements": [
+        "Highly restricted",
+        "Drops all control messages originating from IVI"
+      ],
+      "matched_elements": [
+        "Highly restricted"
+      ],
+      "latency_seconds": 0.033,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 18,
+      "category": "requirement",
+      "question": "What security mechanism should be required before allowing sensitive UDS diagnostic services?",
+      "citations_retrieved": 5,
+      "top_citation": "mitigation_library.md",
+      "concept_coverage": 66.7,
+      "expected_elements": [
+        "Security Access (Seed-Key)",
+        "Physical state checks",
+        "Certificate Auth"
+      ],
+      "matched_elements": [
+        "Physical state checks",
+        "Certificate Auth"
+      ],
+      "latency_seconds": 0.079,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 19,
+      "category": "requirement",
+      "question": "What must be implemented to protect the privacy of V2X communications?",
+      "citations_retrieved": 5,
+      "top_citation": "attack_surface_knowledge.md",
+      "concept_coverage": 100.0,
+      "expected_elements": [
+        "Pseudonym certificates",
+        "V2X PKI"
+      ],
+      "matched_elements": [
+        "Pseudonym certificates",
+        "V2X PKI"
+      ],
+      "latency_seconds": 0.045,
+      "llm_mode": "DEMO FALLBACK"
+    },
+    {
+      "question_id": 20,
+      "category": "requirement",
+      "question": "How should an OTA client prevent rollback attacks?",
+      "citations_retrieved": 5,
+      "top_citation": "mitigation_library.md",
+      "concept_coverage": 100.0,
+      "expected_elements": [
+        "Hardware version counters",
+        "Version checking",
+        "Prevent downgrades to vulnerable versions"
+      ],
+      "matched_elements": [
+        "Hardware version counters",
+        "Version checking",
+        "Prevent downgrades to vulnerable versions"
+      ],
+      "latency_seconds": 0.059,
+      "llm_mode": "DEMO FALLBACK"
+    }
+  ]
+}
